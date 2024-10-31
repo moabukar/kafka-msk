@@ -13,6 +13,12 @@ terraform apply
 ## Bootstrap
 
 ```bash
+
+openssl genpkey -algorithm RSA -out mo-dev.pem -pkeyopt rsa_keygen_bits:2048  ## in case you need to generate a new key
+
+openssl rsa -in mo-dev.pem -pubout -out mo-dev.pub
+
+
 ssh -i "mo-dev.pem" ec2-user@your-ec2-public-ip
 
 source ~/.bashrc

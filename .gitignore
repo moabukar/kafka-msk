@@ -1,5 +1,7 @@
 .env
 .DS_Store
+*.pem
+*.pub
 
 ## Terraform gitignore
 
